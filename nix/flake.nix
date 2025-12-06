@@ -39,10 +39,12 @@
             pkgs.go
             pkgs.iterm2
             pkgs.mkalias
+            pkgs.monitorcontrol
             pkgs.nixfmt-rfc-style
             pkgs.neovim
             pkgs.obsidian
             pkgs.orbstack
+            pkgs.raycast
             # pkgs.spotify
             # pkgs.tmux
             pkgs.vscode
