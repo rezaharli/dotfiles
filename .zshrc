@@ -50,5 +50,7 @@ zinit light Aloxaf/fzf-tab
 eval "$(fzf --zsh)"
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
-alias ls='ls -alrt --color'
 alias c='clear'
+alias ls='ls -alrt --color'
+alias nixrebuild='sudo darwin-rebuild switch --flake ~/Documents/dotfiles/nix#m1pro'
+alias zshrcrebuild='mv ~/.zshrc ~/.zshrc.bak && cp ~/Documents/dotfiles/.zshrc ~/.zshrc && source ~/.zshrc'
