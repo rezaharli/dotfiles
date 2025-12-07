@@ -45,6 +45,7 @@
             pkgs.obsidian
             pkgs.orbstack
             pkgs.raycast
+            pkgs.slack
             # pkgs.spotify
             # pkgs.tmux
             pkgs.vscode
