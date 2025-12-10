@@ -37,6 +37,7 @@
             pkgs.fzf
             pkgs.git-fork
             pkgs.go
+            pkgs.go-migrate
             pkgs.iterm2
             pkgs.mkalias
             pkgs.monitorcontrol
@@ -47,7 +48,7 @@
             pkgs.raycast
             pkgs.slack
             # pkgs.spotify
-            # pkgs.tmux
+            pkgs.tmux
             pkgs.vscode
             # pkgs.warp-terminal
           ];
@@ -101,7 +102,7 @@
             '';
           system.configurationRevision = self.rev or self.dirtyRev or null;
           system.defaults = {
-            dock.autohide = false;
+            dock.autohide = true;
             dock.persistent-apps = [
               "/System/Applications/Calendar.app"
               "/System/Applications/Mail.app"
