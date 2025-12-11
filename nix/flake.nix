@@ -1,5 +1,5 @@
 {
-  description = "Example nix-darwin system flake";
+  description = "M1Pro nix-darwin system flake";
 
   inputs = {
     homebrew-cask = {
@@ -36,18 +36,18 @@
             # pkgs.git
             pkgs.fzf
             pkgs.git-fork
-            pkgs.go
-            pkgs.go-migrate
+            pkgs.infisical
             pkgs.iterm2
             pkgs.mkalias
             pkgs.monitorcontrol
             pkgs.nixfmt-rfc-style
-            pkgs.neovim
-            pkgs.obsidian
+            # pkgs.neovim
+            # pkgs.outline # notes
             pkgs.orbstack
             pkgs.raycast
             pkgs.slack
             # pkgs.spotify
+            pkgs.telegram-desktop
             pkgs.tmux
             pkgs.vscode
             # pkgs.warp-terminal
@@ -65,20 +65,20 @@
             casks = [
             ];
             masApps = {
+              "Mattermost Desktop" = 1614666244;
             };
             onActivation.cleanup = "zap";
             onActivation.autoUpdate = true;
             onActivation.upgrade = true;
           };
 
-          nix.settings.experimental-features = "nix-command flakes";
+          nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
           nixpkgs.config.allowUnfree = true;
           nixpkgs.hostPlatform = "aarch64-darwin";
 
           # programs.fish.enable = true;
           programs.zsh.enable = true;
-
 
           system.activationScripts.applications.text =
             let
