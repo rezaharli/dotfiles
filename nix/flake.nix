@@ -72,7 +72,14 @@
             onActivation.upgrade = true;
           };
 
-          nix.settings.experimental-features = [ "nix-command" "flakes" ];
+          nix.settings.experimental-features = [
+            "nix-command"
+            "flakes"
+          ];
+          nix.settings.trusted-users = [
+            "root"
+            "rezaharli"
+          ];
 
           nixpkgs.config.allowUnfree = true;
           nixpkgs.hostPlatform = "aarch64-darwin";
