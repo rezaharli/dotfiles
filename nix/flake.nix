@@ -32,10 +32,12 @@
         {
           environment.systemPackages = [
             pkgs.bitwarden-desktop
+            pkgs.dbeaver-bin
             pkgs.firefox-bin
             # pkgs.git
             pkgs.fzf
             pkgs.git-fork
+            pkgs.iina
             pkgs.infisical
             pkgs.iterm2
             pkgs.mkalias
@@ -48,6 +50,8 @@
             pkgs.slack
             # pkgs.spotify
             pkgs.telegram-desktop
+            pkgs.texliveFull
+            pkgs.the-unarchiver
             pkgs.tmux
             pkgs.vscode
             # pkgs.warp-terminal
@@ -63,6 +67,9 @@
               "mas"
             ];
             casks = [
+              "hammerspoon"
+              "onlyoffice"
+              "radiola"
             ];
             masApps = {
               "Mattermost Desktop" = 1614666244;
