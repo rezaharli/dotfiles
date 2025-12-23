@@ -31,10 +31,12 @@
         { pkgs, config, ... }:
         {
           environment.systemPackages = [
+            pkgs.bartender
             pkgs.bitwarden-desktop
+            pkgs.bruno
             pkgs.dbeaver-bin
+            pkgs.discord
             pkgs.firefox-bin
-            # pkgs.git
             pkgs.fzf
             pkgs.git-fork
             pkgs.iina
@@ -42,20 +44,27 @@
             pkgs.iterm2
             pkgs.mkalias
             pkgs.monitorcontrol
-            pkgs.nixfmt-rfc-style
             # pkgs.neovim
-            # pkgs.outline # notes
+            pkgs.nixfmt-rfc-style
             pkgs.orbstack
+            # pkgs.outline # notes
             pkgs.raycast
+            pkgs.rectangle
             pkgs.slack
-            # pkgs.spotify
+            # pkgs.soundsource
+            # pkgs.spotify-player
+            # pkgs.steam
             pkgs.telegram-desktop
             pkgs.texliveFull
             pkgs.the-unarchiver
             pkgs.tmux
             pkgs.vscode
-            # pkgs.warp-terminal
           ];
+          environment.variables = {
+            EDITOR = "code --wait";
+            LC_ALL = "en_US.UTF-8";
+            LANG = "en_US.UTF-8";
+          };
 
           fonts.packages = with pkgs; [
             nerd-fonts.jetbrains-mono
@@ -68,10 +77,19 @@
             ];
             casks = [
               "hammerspoon"
+              "hovrly"
+              "keepingyouawake"
               "onlyoffice"
+              "onyx"
+              "openvpn-connect"
+              "protonvpn"
               "radiola"
+              "spotify"
+              "steam"
+              "zen"
             ];
             masApps = {
+              "Easy Authenticator 2FA" = 1629589835;
               "Mattermost Desktop" = 1614666244;
             };
             onActivation.cleanup = "zap";
