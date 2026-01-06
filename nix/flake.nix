@@ -134,11 +134,11 @@
             '';
           system.configurationRevision = self.rev or self.dirtyRev or null;
           system.defaults = {
-            dock.autohide = true;
+            dock.autohide = false;
             dock.persistent-apps = [
               "/System/Applications/Calendar.app"
               "/System/Applications/Mail.app"
-              "${pkgs.firefox-bin}/Applications/Firefox.app"
+              "/Applications/Zen.app"
               "${pkgs.iterm2}/Applications/iTerm2.app"
             ];
           };
