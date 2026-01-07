@@ -39,6 +39,7 @@
             pkgs.firefox-bin
             pkgs.fzf
             pkgs.git-fork
+            pkgs.go
             pkgs.iina
             pkgs.infisical
             pkgs.iterm2
@@ -58,6 +59,7 @@
             pkgs.texliveFull
             pkgs.the-unarchiver
             pkgs.tmux
+            pkgs.uv
             pkgs.vscode
           ];
           environment.variables = {
@@ -76,6 +78,8 @@
               "mas"
             ];
             casks = [
+              "arc"
+              "codex"
               "hammerspoon"
               "hovrly"
               "keepingyouawake"
