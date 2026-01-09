@@ -2,6 +2,10 @@
   description = "M1Pro nix-darwin system flake";
 
   inputs = {
+    charmbracelet-tap = {
+      url = "github:charmbracelet/homebrew-tap";
+      flake = false;
+    };
     homebrew-cask = {
       url = "github:homebrew/homebrew-cask";
       flake = false;
@@ -13,6 +17,7 @@
 
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
+    nix-ai-tools.url = "github:numtide/nix-ai-tools";
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
   };
@@ -25,6 +30,8 @@
       nix-homebrew,
       homebrew-core,
       homebrew-cask,
+      nix-ai-tools,
+      charmbracelet-tap,
     }:
     let
       configuration =
@@ -47,6 +54,7 @@
             pkgs.monitorcontrol
             # pkgs.neovim
             pkgs.nixfmt-rfc-style
+            pkgs.nodejs_24
             pkgs.orbstack
             # pkgs.outline # notes
             pkgs.raycast
@@ -59,8 +67,10 @@
             pkgs.texliveFull
             pkgs.the-unarchiver
             pkgs.tmux
+            pkgs.tree
             pkgs.uv
             pkgs.vscode
+            inputs.nix-ai-tools.packages.${pkgs.system}.crush
           ];
           environment.variables = {
             EDITOR = "code --wait";
@@ -162,6 +172,7 @@
               enableRosetta = true;
               mutableTaps = false;
               taps = {
+                "charmbracelet/homebrew-tap" = charmbracelet-tap;
                 "homebrew/homebrew-core" = homebrew-core;
                 "homebrew/homebrew-cask" = homebrew-cask;
               };
