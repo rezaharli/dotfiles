@@ -2,12 +2,12 @@
   description = "M1Pro nix-darwin system flake";
 
   inputs = {
-    charmbracelet-tap = {
-      url = "github:charmbracelet/homebrew-tap";
-      flake = false;
-    };
     homebrew-cask = {
       url = "github:homebrew/homebrew-cask";
+      flake = false;
+    };
+    anomalyco-tap = {
+      url = "github:anomalyco/homebrew-tap";
       flake = false;
     };
     homebrew-core = {
@@ -30,8 +30,8 @@
       nix-homebrew,
       homebrew-core,
       homebrew-cask,
+      anomalyco-tap,
       nix-ai-tools,
-      charmbracelet-tap,
     }:
     let
       configuration =
@@ -86,6 +86,8 @@
             enable = true;
             brews = [
               "mas"
+
+              "anomalyco/tap/opencode"
             ];
             casks = [
               "arc"
@@ -172,7 +174,7 @@
               enableRosetta = true;
               mutableTaps = false;
               taps = {
-                "charmbracelet/homebrew-tap" = charmbracelet-tap;
+                "anomalyco/homebrew-tap" = anomalyco-tap;
                 "homebrew/homebrew-core" = homebrew-core;
                 "homebrew/homebrew-cask" = homebrew-cask;
               };

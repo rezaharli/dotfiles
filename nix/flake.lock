@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "anomalyco-tap": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1767918737,
+        "narHash": "sha256-KYSiJB99tvEn31Wn/dF4wqTva6+Kyl27KCWETCr5GGs=",
+        "owner": "anomalyco",
+        "repo": "homebrew-tap",
+        "rev": "d3642e564e1df75acd6f43a315e82915f0572f0f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "anomalyco",
+        "repo": "homebrew-tap",
+        "type": "github"
+      }
+    },
     "blueprint": {
       "inputs": {
         "nixpkgs": [
@@ -39,30 +55,14 @@
         "type": "github"
       }
     },
-    "charmbracelet-tap": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1767894446,
-        "narHash": "sha256-lxk+X7zyU12WUH6xF9puxlrNHTn3SM0eJlm+pYK/QHY=",
-        "owner": "charmbracelet",
-        "repo": "homebrew-tap",
-        "rev": "a0fc74869c2533ce7f156caa3ea44281daeeff75",
-        "type": "github"
-      },
-      "original": {
-        "owner": "charmbracelet",
-        "repo": "homebrew-tap",
-        "type": "github"
-      }
-    },
     "homebrew-cask": {
       "flake": false,
       "locked": {
-        "lastModified": 1767927716,
-        "narHash": "sha256-2aOgxebGgvecK/Wt6vcJhi5TGJBTRTUVaok/yI4Ca/c=",
+        "lastModified": 1767937441,
+        "narHash": "sha256-hiGvxqI6npGOAnNwMXkF1628IkyKhhYsAqO5kmSAuqM=",
         "owner": "homebrew",
         "repo": "homebrew-cask",
-        "rev": "737ccfb6e8c6c9fdba3caef556304eef97bd37a3",
+        "rev": "cc94d21fe7abb3cc93db50671bf5048176711be9",
         "type": "github"
       },
       "original": {
@@ -74,11 +74,11 @@
     "homebrew-core": {
       "flake": false,
       "locked": {
-        "lastModified": 1767928010,
-        "narHash": "sha256-PvM5L6IyLKN2tcLWHMTgp54WW4Ygxxgj2lEF2J7wO8M=",
+        "lastModified": 1767941312,
+        "narHash": "sha256-uEs9UmXnfBSszMFUfYYmvBkUlCYXnad1RAkiipTt2vc=",
         "owner": "homebrew",
         "repo": "homebrew-core",
-        "rev": "71a9f85dfb56c253865548f60765c755f2a0fa65",
+        "rev": "99745f0551ee8d155f4b31de6ea0dc6be0ab3f93",
         "type": "github"
       },
       "original": {
@@ -180,7 +180,7 @@
     },
     "root": {
       "inputs": {
-        "charmbracelet-tap": "charmbracelet-tap",
+        "anomalyco-tap": "anomalyco-tap",
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
         "nix-ai-tools": "nix-ai-tools",
