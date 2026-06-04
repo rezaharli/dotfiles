@@ -38,12 +38,11 @@
         { pkgs, config, ... }:
         {
           environment.systemPackages = [
-            pkgs.bartender
             pkgs.bitwarden-desktop
             pkgs.bruno
             pkgs.dbeaver-bin
             pkgs.discord
-            pkgs.firefox-bin
+            # pkgs.firefox-bin
             pkgs.fzf
             pkgs.git-fork
             pkgs.go
@@ -86,12 +85,13 @@
             enable = true;
             brews = [
               "mas"
+              "rtk"
 
               "anomalyco/tap/opencode"
             ];
             casks = [
               "arc"
-              "codex"
+              "bartender"
               "hammerspoon"
               "hovrly"
               "keepingyouawake"
