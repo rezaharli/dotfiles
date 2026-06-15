@@ -84,7 +84,9 @@
           homebrew = {
             enable = true;
             brews = [
+              "gh"
               "mas"
+              "ollama"
               "rtk"
 
               "anomalyco/tap/opencode"
@@ -123,6 +125,7 @@
           ];
 
           nixpkgs.config.allowUnfree = true;
+          nixpkgs.config.permittedInsecurePackages = [ "electron-39.8.10" ];
           nixpkgs.hostPlatform = "aarch64-darwin";
 
           # programs.fish.enable = true;
