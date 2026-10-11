@@ -44,11 +44,11 @@
             pkgs.discord
             # pkgs.firefox-bin
             pkgs.fzf
-            pkgs.git-fork
+            # pkgs.git-fork
             pkgs.go
             pkgs.iina
             pkgs.infisical
-            pkgs.iterm2
+            # pkgs.iterm2
             pkgs.mkalias
             pkgs.monitorcontrol
             # pkgs.neovim
@@ -68,7 +68,7 @@
             pkgs.tmux
             pkgs.tree
             pkgs.uv
-            pkgs.vscode
+            # pkgs.vscode
             inputs.nix-ai-tools.packages.${pkgs.system}.crush
           ];
           environment.variables = {
@@ -86,7 +86,7 @@
             brews = [
               "gh"
               "mas"
-              "ollama"
+              # "ollama"
               "rtk"
 
               "anomalyco/tap/opencode"
@@ -158,7 +158,7 @@
               "/System/Applications/Calendar.app"
               "/System/Applications/Mail.app"
               "/Applications/Zen.app"
-              "${pkgs.iterm2}/Applications/iTerm2.app"
+              # "${pkgs.iterm2}/Applications/iTerm2.app"
             ];
           };
           system.primaryUser = "rezaharli";
@@ -181,6 +181,7 @@
                 "homebrew/homebrew-core" = homebrew-core;
                 "homebrew/homebrew-cask" = homebrew-cask;
               };
+              trust.taps = [ "anomalyco/tap" ];
               user = "rezaharli";
             };
           }
