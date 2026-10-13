@@ -10,6 +10,10 @@
       url = "github:anomalyco/homebrew-tap";
       flake = false;
     };
+    tareq1988-tap = {
+      url = "github:tareq1988/homebrew-tap";
+      flake = false;
+    };
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
       flake = false;
@@ -31,6 +35,7 @@
       homebrew-core,
       homebrew-cask,
       anomalyco-tap,
+      tareq1988-tap,
       nix-ai-tools,
     }:
     let
@@ -105,6 +110,7 @@
               "radiola"
               "spotify"
               "steam"
+              "tareq1988/tap/prayer-times"
               "zen"
             ];
             masApps = {
@@ -181,8 +187,12 @@
                 "anomalyco/homebrew-tap" = anomalyco-tap;
                 "homebrew/homebrew-core" = homebrew-core;
                 "homebrew/homebrew-cask" = homebrew-cask;
+                "tareq1988/homebrew-tap" = tareq1988-tap;
               };
-              trust.taps = [ "anomalyco/tap" ];
+              trust.taps = [
+                "anomalyco/tap"
+                "tareq1988/tap"
+              ];
               user = "rezaharli";
             };
           }
