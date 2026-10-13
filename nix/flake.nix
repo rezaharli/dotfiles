@@ -56,8 +56,9 @@
             pkgs.nodejs_24
             pkgs.orbstack
             # pkgs.outline # notes
+            pkgs.python315
             pkgs.raycast
-            pkgs.rectangle
+            # pkgs.rectangle
             pkgs.slack
             # pkgs.soundsource
             # pkgs.spotify-player
