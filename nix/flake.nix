@@ -62,7 +62,7 @@
             pkgs.orbstack
             # pkgs.outline # notes
             pkgs.python315
-            pkgs.raycast
+            # pkgs.raycast
             # pkgs.rectangle
             pkgs.slack
             # pkgs.soundsource
