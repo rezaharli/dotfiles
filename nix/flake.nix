@@ -95,7 +95,7 @@
               # "ollama"
               "rtk"
 
-              "anomalyco/tap/opencode"
+              "anomalyco/tap/opencode-v2"
             ];
             casks = [
               "arc"
